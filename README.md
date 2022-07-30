@@ -3,6 +3,7 @@
 React component librar
 
 ## Quality tools
-- prettier
-- linter
-- storybook
+
+- prettier ✅
+- linter ✅
+- storybook ✅

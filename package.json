@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "prettier:check": "prettier --check \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
+    "prettier:fix": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
+    "type-check": "tsc",
+    "type-check:watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -33,15 +39,25 @@
     "@storybook/builder-webpack5": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.15",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
     "babel-loader": "^8.2.5",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "dependencies": {}
+  }
 }

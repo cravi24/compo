@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -9,6 +9,7 @@ interface ButtonProps {
   /**
    * What background color to use
    */
+  // eslint-disable-next-line react/require-default-props
   backgroundColor?: string;
   /**
    * How large should the button be?
@@ -27,13 +28,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
+export function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
@@ -45,4 +40,10 @@ export const Button = ({
       {label}
     </button>
   );
+}
+
+Button.defaultProps = {
+  primary: false,
+  size: 'medium',
+  onClick: () => {},
 };
