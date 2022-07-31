@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: build and deploy
 on:
   push:
     branches:
@@ -10,13 +10,28 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build:sb
+      - name: node.js setip
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: prettier
+        run: npm run prettier:check
+
+      - name: linter
+        run: npm run lint
+
+      - name: type check
+        run: npm run type-check
+
+      - name: build storybook 🔧
+        run: npm run build:sb
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

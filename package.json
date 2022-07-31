@@ -64,5 +64,12 @@
   },
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120
   }
 }
