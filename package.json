@@ -6,6 +6,7 @@
   "scripts": {
     "start:sb": "start-storybook -p 6006",
     "build:sb": "build-storybook",
+    "deploy:sb": "npx gh-pages -d storybook-static",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
