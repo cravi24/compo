@@ -34,6 +34,8 @@ jobs:
         run: npm run build:sb
 
       - name: Deploy storybook 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: storybook-static # The folder the action should deploy.
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy:sb -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
