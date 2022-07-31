@@ -1,4 +1,4 @@
-![Build](https://github.com/cravi24/compo/actions/workflows/workflow.yml/badge.svg)
+![Build](https://github.com/cravi24/compo/actions/workflows/main.yml/badge.svg)
 
 # compo
 
