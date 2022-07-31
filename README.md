@@ -1,6 +1,8 @@
+![Build](https://github.com/cravi24/compo/actions/workflows/workflow.yml/badge.svg)
+
 # compo
 
-React component librar
+React component library
 
 ## Quality tools
 
