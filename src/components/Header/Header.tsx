@@ -14,7 +14,7 @@ export interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-export function Header({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) {
+export function Header({ user, onLogin, onLogout, onCreateAccount }: HeaderProps): JSX.Element {
   return (
     <header>
       <div className="wrapper">
