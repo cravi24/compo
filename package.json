@@ -1,12 +1,12 @@
 {
-  "name": "compo",
+  "name": "@cravi24/compo",
   "version": "1.0.0",
   "description": "react component library",
   "main": "index.js",
   "scripts": {
+    "start:sb": "start-storybook -p 6006",
+    "build:sb": "build-storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "prettier:check": "prettier --check \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/cravi24/compo/issues"
   },
-  "homepage": "https://github.com/cravi24/compo#readme",
+  "homepage": "https://cravi24.github.io/compo",
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@storybook/addon-a11y": "^6.5.9",
