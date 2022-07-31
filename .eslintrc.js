@@ -36,6 +36,7 @@ module.exports = {
         devDependencies: ['.storybook/**', '**/*.stories.tsx'],
       },
     ],
+    'arrow-body-style': 'off',
     'object-curly-newline': [
       'error',
       {

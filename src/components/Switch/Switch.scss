@@ -1,0 +1,49 @@
+@import '../../styles.scss';
+
+.switch,
+::after {
+  --handle-width: 20px;
+  --handle-transition: all 250ms ease-in-out;
+}
+
+.switch {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &--checkbox {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &--handle {
+    position: relative;
+    width: 40px;
+    height: var(--handle-width);
+    border-radius: var(--handle-width);
+    border: 1px solid var(--color-grey-1);
+    transition: var(--handle-transition);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 2px;
+      height: calc( var(--handle-width) - 2px);
+      width: calc( var(--handle-width) - 2px);
+      border-radius: 50%;
+      background-color: var(--color-grey-1);
+      transition: var(--handle-transition);
+    }
+  }
+
+  &--checkbox:checked + &--handle {
+    background-color: var(--color-blue-1);
+    border-color: var(--color-blue-1);
+
+    &::after {
+      transform: translateX(100%);
+      background-color: var(--color-white-1);
+    }
+  }
+}
