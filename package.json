@@ -32,7 +32,7 @@
   "homepage": "https://cravi24.github.io/compo",
   "devDependencies": {
     "@babel/core": "^7.18.10",
-    "@storybook/addon-a11y": "^6.5.9",
+    "@storybook/addon-a11y": "^6.5.10",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.9",
