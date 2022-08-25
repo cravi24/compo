@@ -9,10 +9,10 @@ export type SwitchProps = {
 export const Switch = ({ label, align }: SwitchProps): JSX.Element => {
   return (
     <label htmlFor="switch-input" className="switch">
-      <input type="checkbox" id="switch-input" className="switch--checkbox" />
+      <input type="checkbox" id="switch-input" className="switch__checkbox" />
 
       {align === 'left' ? label : ''}
-      <div className="switch--handle" />
+      <div className="switch__handle" hidden />
       {align === 'right' ? label : ''}
     </label>
   );

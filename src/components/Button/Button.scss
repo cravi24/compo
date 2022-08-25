@@ -1,34 +1,36 @@
+@import '../../styles/colors.scss';
+@import '../../styles/typography.scss';
+
 .button {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: var(--ff);
+  font-weight: 500;
   border: 0;
   border-radius: 3em;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  color: var(--clr-primary-900);
 
-  &--primary {
-    color: white;
-    background-color: #0d6efd;
+  &__primary {
+    background-color: var(--clr-primary-300);
   }
 
-  &--secondary {
-    color: #333;
+  &__secondary {
     background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    box-shadow: var(--clr-secondary-400) 0px 0px 0px 1px inset;
   }
 
-  &--small {
+  &__small {
     font-size: 12px;
     padding: 10px 16px;
   }
 
-  &--medium {
+  &__medium {
     font-size: 14px;
     padding: 11px 20px;
   }
 
-  &--large {
+  &__large {
     font-size: 16px;
     padding: 12px 24px;
   }

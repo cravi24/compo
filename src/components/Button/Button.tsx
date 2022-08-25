@@ -10,11 +10,11 @@ export interface ButtonProps {
 }
 
 export function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
-  const mode = primary ? 'button--primary' : 'button--secondary';
+  const mode = primary ? 'button__primary' : 'button__secondary';
   return (
     <button
       type="button"
-      className={['button', `button--${size}`, mode].join(' ')}
+      className={['button', `button__${size}`, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
