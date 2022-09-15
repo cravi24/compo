@@ -4,6 +4,7 @@
   --handle-width: 30px;
   --transition-duration: 250ms;
   --handle-transition: all var(--transition-duration) ease-in-out;
+
   @media (prefers-reduced-motion: reduce) {
     --transition-duration: 0ms;
   }
@@ -29,8 +30,8 @@
     width: calc(2 * var(--handle-width));
     height: var(--handle-width);
     border-radius: var(--handle-width);
-    background-color: var(--clr-primary-300);
-    border: 1px solid var(--clr-primary-400);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color-border);
     transition: var(--handle-transition);
   }
 
@@ -44,17 +45,17 @@
     height: calc(var(--handle-width) - 3 * var(--offset));
     width: calc(var(--handle-width) - 2 * var(--offset));
     border-radius: 50%;
-    background-color: var(--clr-secondary-300);
+    background-color: var(--primary-disabled-color);
     transition: var(--handle-transition);
   }
 
   &__checkbox:checked + &__handle {
-    background-color: var(--clr-accent-300);
-    border-color: var(--clr-accent-400);
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-border-color);
   }
 
   &__checkbox:checked ~ &__handle::after {
     left: var(--handle-width);
-    background-color: var(--clr-secondary-300);
+    background-color: var(--tertiary-disabled-color);
   }
 }

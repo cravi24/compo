@@ -1,30 +1,41 @@
 import React from 'react';
 import './Button.scss';
 
+export enum ButtonVariant {
+  Primary = 'primary',
+  Secondary = 'secondary',
+  Tertiary = 'tertiary',
+}
+
+export enum ButtonSize {
+  Large = 'large',
+  Medium = 'medium',
+  Small = 'small',
+}
+
 export interface ButtonProps {
-  primary?: boolean;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  disabled: boolean;
   label: string;
   onClick?: () => void;
 }
 
-export function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
-  const mode = primary ? 'button__primary' : 'button__secondary';
+export function Button({
+  variant = ButtonVariant.Primary,
+  size = ButtonSize.Medium,
+  disabled = false,
+  label,
+  ...props
+}: ButtonProps) {
   return (
     <button
       type="button"
-      className={['button', `button__${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={['button', `button__${size}`, `button__${variant}`].join(' ')}
+      disabled={disabled}
       {...props}
     >
       {label}
     </button>
   );
 }
-
-Button.defaultProps = {
-  primary: false,
-  size: 'medium',
-  onClick: () => {},
-};

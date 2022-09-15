@@ -8,7 +8,7 @@ export type SwitchProps = {
 
 export const Switch = ({ label, align }: SwitchProps): JSX.Element => {
   return (
-    <label htmlFor="switch-input" className="switch">
+    <label htmlFor="switch-input" className="switch" aria-hidden="true">
       <input type="checkbox" id="switch-input" className="switch__checkbox" />
 
       {align === 'left' ? label : ''}

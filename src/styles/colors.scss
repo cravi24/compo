@@ -1,13 +1,44 @@
+@mixin generateColorPalette($name, $color-value) {
+  $hue: hue($color-value);
+  $saturation: saturation($color-value);
+  $lightness: lightness($color-value);
+  --#{$name}-color: hsl(#{$hue}, #{$saturation}, #{$lightness});
+  --#{$name}-color-10: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + 5%));
+  --#{$name}-color-20: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + 10%));
+  --#{$name}-color-30: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + 15%));
+  --#{$name}-color-40: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + 20%));
+  --#{$name}-color-50: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + 25%));
+  --#{$name}-color-60: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + 30%));
+}
+
 :root {
-  --clr-primary-300: hsl(5, 76%, 95%);
-  --clr-primary-400: hsl(5, 76%, 85%);
-  // --clr-primary-500: hsl(5, 76%, 55%);
-  // --clr-primary-600: hsl(5, 76%, 45%);
-  // --clr-primary-700: hsl(5, 76%, 35%);
-  // --clr-primary-800: hsl(5, 76%, 25%);
-  --clr-primary-900: hsl(5, 76%, 18%);
-  --clr-secondary-300: hsl(346, 66%, 100%);
-  --clr-secondary-400: hsl(346, 66%, 94%);
-  --clr-accent-300: hsl(129, 60%, 85%);
-  --clr-accent-400: hsl(129, 60%, 75%);
+  @include generateColorPalette('baby-pink', #e45858);
+  @include generateColorPalette('blue', #6347eb);
+  @include generateColorPalette('violet', #d2d2e9);
+
+  /* App Theme / Brand */
+  --primary-color: var(--blue-color-10);
+  --primary-border-color: var(--blue-color-10);
+  --primary-hover-color: var(--blue-color);
+  --primary-disabled-color: var(--blue-color-60);
+  --primary-disabled-border-color: var(--blue-color-50);
+  --primary-color-text: #fffffe;
+  --primary-color-text-disabled: #fffffed3;
+
+  --secondary-color: var(--violet-color-10);
+  --secondary-border-color: var(--violet-color-10);
+  --secondary-hover-color: var(--violet-color);
+  --secondary-disabled-color: var(--violet-color-60);
+  --secondary-disabled-border-color: var(--violet-color-20);
+  --secondary-color-text: #2b2c34;
+  --secondary-color-text-disabled: #2b2c3482;
+
+  --tertiary-color: var(--baby-pink-color-10);
+  --tertiary-border-color: var(--baby-pink-color-10);
+  --tertiary-hover-color: var(--baby-pink-color);
+  --tertiary-disabled-color: var(--baby-pink-color-60);
+  --tertiary-disabled-border-color: var(--baby-pink-color-50);
+  --tertiary-color-text: #2b2c34;
+  --tertiary-color-text-disabled: #2b2c3482;
+
 }
