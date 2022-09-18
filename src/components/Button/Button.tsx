@@ -16,7 +16,7 @@ export enum ButtonSize {
 export interface ButtonProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
-  disabled: boolean;
+  disabled?: boolean;
   label: string;
   onClick?: () => void;
 }
